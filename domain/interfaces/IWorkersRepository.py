@@ -1,0 +1,9 @@
+from typing import Protocol
+
+class IWorkersRepository(Protocol):
+    async def get_worker_by_id_async(self, worker_id: int):
+        ...
+    async def get_all_workers(self):
+        ...
+    async def add_workers(self, workers: dict):
+        ...
